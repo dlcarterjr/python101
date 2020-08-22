@@ -3,8 +3,12 @@
 
 
 ##  Get the input number from the user = num.
-num = int(input("\nEnter Fibonacci sequence number to reach: "))
-
+while True:
+    try:
+        num = int(input("\nEnter Fibonacci sequence number to reach: "))
+        break
+    except ValueError:
+        print('\nPlease enter WHOLE numbers, only.')
 
 ##  Declare beginning variables (a and b) to beginning values (a = 1, b = 1, c = 0).
 a = 1
