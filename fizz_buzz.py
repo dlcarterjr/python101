@@ -5,25 +5,33 @@
 
 
 # Get user input number (as integer) = "num".
-num =  int(input("Enter number to count up to: "))
-num_list = []
+while True:
 
-# Build list of numbers from 1 to the "num". num_list ### WRONG!  no list needed. Just check each number
-for index in range(num):
-    num_list.append([index])
+    try:       
+        num =  int(input("\nEnter number to count up to: "))
+        print("\n")
+        break
+    except:
+        ValueError
+        print("\nPlease enter a WHOLE number, only:\n")
 
+## Loop iteration up to the entered number, starting with "1".
+for count in range(1, num):
 
 #  This is what checks the number.
+    if count % 3 == 0 and count % 5 == 0:  ## CHECK MOST RESTRICTIVE CHECK FIRST (DIVISIBLE BY BOTH FACTORS)
+        print("fizzbuzz")
+    
+    elif count % 3 == 0:  ## If num is divisible by 3, print "fizz".
+        print("fizz")
+    
+    elif count % 5 == 0:  ## If num divisible by 5, print "buzz".
+        print("buzz")  
 
-    #####CHECK MOST RESTRICTIVE CHECK FIRST (DIVISIBLE BY BOTH FACTORS)
-    # If current_num divisible by 3, check to see if divisible by 5 also.
-        # If also divisible by 5, print 'fizzbuzz'.
-        # If not, append 'fizz' to print.
-        #print current_num
+    else:  ## Print current_num
+        print(count)
 
-    #If current_num divisible by 5, check to see if disible by 3, also.
-        # If also divisible by 3, append 'fizzbuzz' to output_list.
-        # If no, append 'buzz' to output_list.
-        # If neither, go to next step.
+print('\n')
+    
 
-    # Print current_num
+    
