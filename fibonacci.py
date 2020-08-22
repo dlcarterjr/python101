@@ -14,7 +14,7 @@ counter = 1
 ## First print a and b (prints 1 and 1 as first numbers of Fib sequence).
 print(f'\n{a}\n{b}')
 ##  Set loop to run as long as counter <= num.
-while counter < num - 1:  ##"-2" accouts for the first two "1" values.
+while counter < num - 1:  ##"-1" accouts for the first two "1" values.
     c = a + b  ## formula is c = a + b
     print(c)  ## Print 
     a = b  ## a is then assigned b
